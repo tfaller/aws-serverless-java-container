@@ -16,6 +16,7 @@
 
     <modules>
         <module>aws-serverless-java-container-core</module>
+        <module>aws-serverless-java-container-dropwizard</module>
         <module>aws-serverless-java-container-jersey</module>
         <module>aws-serverless-java-container-spark</module>
         <module>aws-serverless-java-container-spring</module>
@@ -45,6 +46,7 @@
     <properties>
         <jacoco.minCoverage>0.5</jacoco.minCoverage>
         <dependencyCheck.version>5.0.0</dependencyCheck.version>
+        <slf4j.version>1.8.0-beta2</slf4j.version>
     </properties>
 
     <dependencies>
@@ -56,18 +58,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.8.0-beta2</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.8.0-beta2</version>
+            <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
 
