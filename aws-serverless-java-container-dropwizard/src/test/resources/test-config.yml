@@ -1,0 +1,5 @@
+logging:
+  type: external
+
+template: Hello, %s!
+defaultName: Stranger

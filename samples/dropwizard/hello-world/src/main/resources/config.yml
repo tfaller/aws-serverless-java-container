@@ -1,0 +1,7 @@
+logging:
+  level: INFO
+  loggers:
+    com.amazonaws.serverless.sample.dropwizard: DEBUG
+
+template: Hello, %s!
+defaultName: Stranger
