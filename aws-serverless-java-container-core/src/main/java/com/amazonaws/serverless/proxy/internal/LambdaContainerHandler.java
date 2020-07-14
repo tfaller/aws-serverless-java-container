@@ -81,7 +81,13 @@ public abstract class LambdaContainerHandler<RequestType, ResponseType, Containe
     private static ContainerConfig config = ContainerConfig.defaultConfig();
     private static ObjectMapper objectMapper = new ObjectMapper();
     static {
-        objectMapper.registerModule(new AfterburnerModule());
+        try {
+            objectMapper.registerModule(new AfterburnerModule());
+        } catch(NoClassDefFoundError e) {
+            // Do nothing. Afterburner is just nice to have.
+            // It's sometimes even required to exclude Afterburner:
+            // GraalVM Native Image can't handle it.
+        }
     }
 
 
